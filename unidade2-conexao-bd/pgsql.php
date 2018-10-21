@@ -1,9 +1,12 @@
 <?php
-// Conexão com o PostgreSQL.
-$conexao = pg_connect("host=localhost port=5432 dbname=teste user=postgres password=pgsql");
+// Configurações.
+$endereco = 'localhost';
+$usuario  = 'root';
+$senha    = '';
+$banco    = 'exemplo';
 
-// Insere um registro no banco.
-pg_query($conexao, "INSERT INTO usuarios (id, nome) VALUES (1, 'João da Silva')");
+// Conexão com o PostgreSQL.
+$conexao = pg_connect("host=$endereco port=5432 dbname=$banco user=$usuario password=$senha") or die('Conexão falhou!');
 
 // Encerra a conexão.
 pg_close($conexao);

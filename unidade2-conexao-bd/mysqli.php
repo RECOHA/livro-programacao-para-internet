@@ -1,21 +1,20 @@
 <?php
 // Configuração.
 $endereco = 'localhost';
-$usuario  = 'mysql';
-$senha    = 'password';
-$banco    = 'teste';
+$usuario  = 'root';
+$senha    = '';
+$banco    = 'exemplo';
 
 // Conecta no banco MySQL.
 $conexao = mysqli_connect($endereco, $usuario, $senha, $banco);
 
-// Verifica se a conexão falhou e exibe o erro caso não obteve êxito.
+// Se a conexão falhou exibe o erro e termina o programa.
 if (mysqli_connect_errno()) {
-    printf("Conexão falhou!", mysqli_connect_error());
-    exit();
+    die('Conexão falhou!' . mysqli_connect_error());
 }
 
-// Executa o SQL no banco de dados.
-mysqli_query($conexao, "INSERT INTO usuarios (id, nome) VALUES (1, 'João da Silva')");
+// Conexão realizada com sucesso.
+echo "Conexão ok!";
 
 // Encerra conexão.
 mysqli_close($conexao);

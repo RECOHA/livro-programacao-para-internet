@@ -16,6 +16,14 @@ class StackTest extends TestCase
         $this->assertEquals(0, count($stack));
     }
 
+    public function testEmpty()
+    {
+        $stack = [];
+        $this->assertEmpty($stack);
+
+        return $stack;
+    }
+
     /**
      * @depends testEmpty
      */

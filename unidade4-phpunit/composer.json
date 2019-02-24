@@ -1,0 +1,13 @@
+{
+    "name": "recoha/livro-programacao-internet",
+    "authors": [
+        {
+            "name": "Renan Hagiwara",
+            "email": "renan@recoha.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "6.4"
+    }
+}
